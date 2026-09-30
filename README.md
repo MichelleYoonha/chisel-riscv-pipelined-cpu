@@ -12,17 +12,16 @@ five-stage pipeline with forwarding and hazard recovery.
 ## What I implemented
 
 The source below is the cumulative version from my final course archive. The
-same `single-cycle/cpu.scala` file was first built for R-type execution in
-Lab 2 and then extended for memory and control-flow instructions in Lab 3.
+same `single-cycle/cpu.scala` file was first built for R-type execution and then extended for memory and control-flow instructions.
 
-### Lab 2 - ALU decoding and R-type single-cycle CPU
+### ALU decoding and R-type single-cycle CPU
 
 | File | My contribution |
 | --- | --- |
 | [`components/alucontrol.scala`](src/main/scala/components/alucontrol.scala) | Decoded `funct3` and `funct7` into ALU operations, including ADD/SUB and SRL/SRA disambiguation, with forced-add and immediate modes for later instruction types. |
 | [`single-cycle/cpu.scala`](src/main/scala/single-cycle/cpu.scala) | Connected instruction fields, register reads, ALU control, ALU execution, register write-back, `x0` write protection, and sequential `PC + 4` execution for R-type instructions. |
 
-### Lab 3 - Complete single-cycle control and datapath
+### Complete single-cycle control and datapath
 
 | File | My contribution |
 | --- | --- |
@@ -30,7 +29,7 @@ Lab 2 and then extended for memory and control-flow instructions in Lab 3.
 | [`components/branch-control.scala`](src/main/scala/components/branch-control.scala) | Implemented BEQ/BNE and signed or unsigned BLT/BGE comparisons from `funct3`, gated by the main branch control signal. |
 | [`single-cycle/cpu.scala`](src/main/scala/single-cycle/cpu.scala) | Extended the R-type design with immediate generation, data-memory access, ALU/memory/`PC + 4` write-back selection, and prioritized next-PC logic for branches, JAL, and JALR. |
 
-### Lab 4 - Five-stage pipelined CPU
+### Five-stage pipelined CPU
 
 | File | My contribution |
 | --- | --- |
