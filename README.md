@@ -1,7 +1,7 @@
 # RISC-V CPU: Single-Cycle to Five-Stage Pipeline in Chisel
 
 This repository is a cleaned portfolio archive of my Fall 2025 Computer
-Architecture project at Seoul National University. Across Labs 2-4, I built
+Architecture project at Seoul National University. For course lab project, I built
 the processor incrementally: first the ALU decoder and R-type single-cycle
 datapath, then the complete single-cycle control and data paths, and finally a
 five-stage pipeline with forwarding and hazard recovery.
